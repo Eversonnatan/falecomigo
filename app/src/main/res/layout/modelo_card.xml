@@ -10,6 +10,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/imgPerfil"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:src="@drawable/image"
@@ -22,6 +23,7 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/nomePessoa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sharon Tate"
@@ -29,6 +31,7 @@
                 />
 
             <EditText
+                android:id="@+id/descricaoPessoa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sou a melhor Psicologa do país!
@@ -42,7 +45,7 @@ Entre em contato agora !"
                 android:orientation="horizontal">
 
                 <RatingBar
-
+                    android:id="@+id/rtBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"

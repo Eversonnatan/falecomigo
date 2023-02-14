@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RatingBar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ListView idItens;
@@ -38,7 +41,21 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
+            //Variaveis de modelo
+            ImageView imgPerfil;
+            TextView nomePessoa, descricaoPessoa;
+            RatingBar rtBar;
+
+            //Adaptador ligando ao modelo
+            View v = getLayoutInflater().inflate(R.layout.modelo_card,null);
+
+            //Apresentar as variaveis do java para o modelo xml
+            imgPerfil = v.findViewById(R.id.imgPerfil);
+            nomePessoa = v.findViewById(R.id.nomePessoa);
+            descricaoPessoa = v.findViewById(R.id.descricaoPessoa);
+            rtBar = v.findViewById(R.id.rtBar);
             return null;
+
         }
     }
 }
