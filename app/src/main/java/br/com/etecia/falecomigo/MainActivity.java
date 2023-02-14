@@ -12,6 +12,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ListView idItens;
+    String descricaoPessoa [] = {"Sou psicologa",};
+    String nomePessoa [ ]  = {"Sharon"};
+    int imgPerfil [ ] = {R.drawable.image};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,18 +46,25 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             //Variaveis de modelo
-            ImageView imgPerfil;
-            TextView nomePessoa, descricaoPessoa;
+            ImageView gImgPerfil;
+            TextView gNomePessoa, gDescricaoPessoa;
             RatingBar rtBar;
 
             //Adaptador ligando ao modelo
             View v = getLayoutInflater().inflate(R.layout.modelo_card,null);
 
             //Apresentar as variaveis do java para o modelo xml
-            imgPerfil = v.findViewById(R.id.imgPerfil);
-            nomePessoa = v.findViewById(R.id.nomePessoa);
-            descricaoPessoa = v.findViewById(R.id.descricaoPessoa);
-            rtBar = v.findViewById(R.id.rtBar);
+            gImgPerfil = v.findViewById(R.id.imgPerfil);
+            gNomePessoa = v.findViewById(R.id.nomePessoa);
+            gDescricaoPessoa = v.findViewById(R.id.descricaoPessoa);
+
+
+            //inserindo os valores nas variaveis do java
+            gDescricaoPessoa.setText(descricaoPessoa[i]);
+            gNomePessoa.setText(nomePessoa[i]);
+            gImgPerfil.setImageResource(imgPerfil[i]);
+
+
             return null;
 
         }
