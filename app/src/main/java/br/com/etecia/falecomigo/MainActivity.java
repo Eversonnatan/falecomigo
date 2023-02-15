@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ListView idItens;
-    String descricaoPessoa [] = {"Sou psicologa",};
-    String nomePessoa [ ]  = {"Sharon"};
-    int imgPerfil [ ] = {R.drawable.image};
+    String descricaoPessoa [] = {"Sou psicologa","Sou designer","Sou advogado","Sou Coach de combate Sambo","Sou nutricionista"};
+    String nomePessoa []  = {"Sharon","kelly","Lucas","Khabib","Karen"};
+    int imgPerfil [] = {R.drawable.image, R.drawable.imageum,R.drawable.imagedois,R.drawable.imagetres,R.drawable.imagequatro,R.drawable.imagecinco};
 
 
     @Override
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             gImgPerfil.setImageResource(imgPerfil[i]);
 
 
-            return null;
+            return v;
 
         }
     }
